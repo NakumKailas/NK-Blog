@@ -22,9 +22,6 @@ const Footer = () => {
       <nav>
         <p>
           {data.site.siteMetadata.title} © {new Date().getFullYear()}.{" "}
-          <span>
-            Crafted by <a href="https://aniac.tech">ANIAC</a>
-          </span>
         </p>
         <div className={footerStyle.socialIcons}>
           <a href="https://www.linkedin.com/in/kailas-nakum/">

@@ -20,7 +20,7 @@ const homePage = ({ data, location }) => {
         <h1>
           <span>{data.site.siteMetadata.title}.</span>
         </h1>
-        <p>Professionaly an EC engineer who loves Web technologies, too.</p>
+        <p>{data.site.siteMetadata.description}</p>
         <Link to="/contact">
           <button>
             Get In Touch <MdTouchApp />
