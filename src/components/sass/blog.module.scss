@@ -1,0 +1,150 @@
+@import "./variable.module.scss";
+
+// Blog page styles
+.blog-list {
+  margin-bottom: 1.5rem;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  li {
+    list-style: none;
+    width: 100%;
+    min-height: 220px;
+    margin-bottom: 1.75rem;
+    background: $whiteColor;
+    border-radius: 1rem;
+    box-shadow: 0 2.5rem 5rem -1.5rem rgba($darkColor, 0.15);
+    overflow: hidden;
+  }
+}
+
+.blog-article {
+  display: flex;
+  align-items: center;
+
+  .blog-thumbnail {
+    width: 40%;
+    height: 250px;
+    background: $blueColor;
+    border: none;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1108px) {
+    flex-flow: column wrap;
+    .blog-thumbnail {
+      width: 100%;
+    }
+  }
+
+  .blog-details {
+    word-wrap: break-word;
+    text-align: left;
+    width: 60%;
+    padding: 1.5rem;
+
+    &:is(h1, h2, h3, h4, h5, h6) {
+      font-family: "Playfair Display";
+    }
+
+    @media screen and (max-width: 1108px) {
+      width: 100%;
+    }
+
+    header {
+      h2 {
+        margin: 0.5rem 0 0.75rem;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        letter-spacing: 0.25px;
+      }
+    }
+    section {
+      p {
+        line-height: 1.4;
+        font-size: 0.9rem;
+        word-spacing: 1.2px;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+}
+
+// Blog-Post page style
+.back-to-blogs {
+  margin-top: 2rem;
+  color: $blueColor;
+  a {
+    display: flex;
+    align-items: center;
+    span {
+      line-height: 0;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.blog-post-article {
+  .blog-post-thumbnail {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.25rem;
+    }
+  }
+
+  a {
+    color: $darkColor;
+  }
+
+  hr {
+    margin-bottom: 1rem;
+  }
+
+  section {
+    word-wrap: break-word;
+  }
+
+  &:is(h1, h2, h3, h4, h5, h6) {
+    font-family: "Playfair Display";
+  }
+}
+
+.blog-post-navbar {
+  margin: 2rem 0;
+
+  li {
+    a {
+      color: $blueColor;
+      display: flex;
+      align-items: center;
+
+      span {
+        line-height: 0;
+      }
+    }
+
+    &:nth-child(1) {
+      span {
+        margin-right: 0.5rem;
+      }
+    }
+    &:nth-child(2) {
+      span {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

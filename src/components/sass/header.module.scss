@@ -1,0 +1,85 @@
+@import "./variable.module.scss";
+
+.header {
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: $whiteColor;
+  box-shadow: 0 2rem 5rem -2.1rem rgba($darkColor, 0.25);
+  z-index: 99;
+
+  button {
+    backdrop-filter: unset;
+    &:active,
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+nav {
+  margin: auto;
+  max-width: 972px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    border: 5px solid $blueColor;
+    border-image: linear-gradient(to right, $blueColor 50%, $whiteColor 50%) 10;
+
+    a {
+      color: $darkColor;
+    }
+  }
+
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+
+    li {
+      margin-bottom: 3rem;
+      letter-spacing: 1px;
+
+      a {
+        padding: 0 0.5rem;
+        height: 100%;
+        font-size: 2rem;
+        color: rgba($lightColor, 0.5);
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          color: $whiteColor;
+        }
+      }
+
+      .active-link {
+        position: relative;
+        color: $whiteColor;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -5px;
+          transform: translate(-50%, -50%);
+          height: 50px;
+          width: 2px;
+          background: $whiteColor;
+        }
+      }
+    }
+  }
+}

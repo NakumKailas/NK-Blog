@@ -1,0 +1,120 @@
+@import "./variable.module.scss";
+
+.portfolio-section {
+  margin: 2rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 1440px) {
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    .after-line {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 21px;
+        left: 90px;
+        transform: translate(-51%, -38%);
+        width: 150px;
+        height: 1px;
+        background: $darkColor;
+      }
+    }
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 250px);
+  grid-gap: 1rem;
+
+  div {
+    position: relative;
+    grid-column: 1/2;
+    overflow: hidden;
+    border: 1px solid rgba($darkColor, 0.05);
+    border-radius: 10px;
+
+    img {
+      position: absolute;
+      height: 100%;
+      transform: scale(1.1);
+      transition: all 300ms ease-in-out;
+      z-index: 0;
+    }
+
+    &::after {
+      content: "Wireless Energy Meter";
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      background: rgba($darkColor, 0.7);
+      color: $lightColor;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(1.5);
+      z-index: 9;
+      transition: all 300ms ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1);
+      }
+
+      &::after {
+        opacity: 1;
+        pointer-events: all;
+        transform: scale(1);
+      }
+    }
+
+    &:nth-child(1) {
+      grid-row: 1/2;
+    }
+    &:nth-child(2) {
+      grid-row: 2/3;
+      &::after {
+        content: "Automatic Washroom Light";
+      }
+    }
+    &:nth-child(3) {
+      grid-row: 3/4;
+      &::after {
+        content: "Smart Irrigation System";
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+
+    div {
+      &:nth-child(1) {
+        grid-column: 1/2;
+        grid-row: 1/3;
+      }
+      &:nth-child(2) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      &:nth-child(3) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+    }
+  }
+}

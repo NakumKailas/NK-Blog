@@ -1,0 +1,101 @@
+@import "../components/sass/variable.module.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $darkColor;
+  background-color: $lightColor;
+  font-family: "Oxygen", sans-serif;
+}
+
+::selection {
+  color: $lightColor;
+  background: rgba($darkColor, 0.8);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $blueColor;
+}
+
+p {
+  margin-bottom: 1rem;
+  letter-spacing: 0.35px;
+}
+
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  color: $darkColor;
+  background: rgba($lightColor, 0.4);
+  border: 2px solid $whiteColor;
+  letter-spacing: 0.75px;
+  border-radius: 0.625rem;
+  backdrop-filter: blur(10px);
+
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 1rem 3rem -0.5rem rgba($darkColor, 0.15);
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($darkColor, 0.05);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  svg {
+    margin-left: 0.5rem;
+    fill: $blueColor;
+    stroke: $blueColor;
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+}
+
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: $darkColor;
+  width: 100%;
+
+  p {
+    margin: auto;
+    width: 1200px;
+    color: $lightColor;
+    letter-spacing: 0.8px;
+  }
+}
+
+/* Set Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* set Track */
+::-webkit-scrollbar-track {
+  background: $blueColor;
+}
+
+/* set Thumb */
+::-webkit-scrollbar-thumb {
+  background: $darkColor;
+}

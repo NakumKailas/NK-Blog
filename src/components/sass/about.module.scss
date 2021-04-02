@@ -1,0 +1,66 @@
+@import "./variable.module.scss";
+
+// intro component
+.intro-section {
+  margin: 2rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 1440px) {
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    .after-line {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 21px;
+        left: 90px;
+        transform: translate(-51%, -38%);
+        width: 150px;
+        height: 1px;
+        background: $darkColor;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+
+      span {
+        color: $blueColor;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+
+    ul {
+      margin: 0 2rem 0 1rem;
+      list-style: circle;
+    }
+  }
+
+  a {
+    margin-top: 1.5rem;
+    width: fit-content;
+  }
+}
