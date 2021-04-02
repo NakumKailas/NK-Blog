@@ -4,9 +4,8 @@ module.exports = {
     author: {
       name: `Kailas Nakum`,
     },
-    description: `My portfolio site with Blogs`,
-    siteUrl: `https://dufferblogs.netlify.app/`,
-    craftedBy: "https://aniac.tech",
+    description: `Professionaly an EC engineer who loves Web technologies, too.`,
+    siteUrl: `https://nakumkailas.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-sass`,
