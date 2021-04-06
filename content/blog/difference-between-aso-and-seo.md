@@ -64,6 +64,8 @@ thumbnail: https://www.fueldigi.com/wp-content/uploads/2020/10/The-Difference-Be
 
 ### **(1) WHAT IS ASO ???**
 
+>
+>
 > App Store Optimization is the process of **optimizing a game or application** in order to maximize its visibility in the app stores in **Search** (when users search) and **Explore** (when users browse), increase traffic to listing and improve conversion rate to generate the maximum volume of organic downloads.
 >
 > *ASO is about **Visibility (Search + Explore)** and **Conversion Rate** to download on the stores.*
